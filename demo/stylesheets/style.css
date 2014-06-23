@@ -1,0 +1,271 @@
+/* line 17, /Users/Rose/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, /Users/Rose/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, /Users/Rose/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, /Users/Rose/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, /Users/Rose/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, /Users/Rose/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, /Users/Rose/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, /Users/Rose/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, /Users/Rose/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* line 8, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+body {
+  background-color: #fdfdfd; }
+
+/* line 11, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+.back-to-article {
+  text-align: center;
+  margin: 25px 0 100px 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px; }
+  /* line 16, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+  .back-to-article > a {
+    text-decoration: none;
+    color: #d41f2c; }
+    /* line 19, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+    .back-to-article > a:hover {
+      border-bottom: 1px solid #d41f2c; }
+
+/* line 21, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+.audio-player-wrapper {
+  width: 225px;
+  margin: 100px auto 0 auto;
+  background-color: #ddddda;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px; }
+  /* line 28, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+  .audio-player-wrapper.error .audio-player-image {
+    background: #f78471; }
+    /* line 30, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+    .audio-player-wrapper.error .audio-player-image:before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: 10px;
+      width: 100%;
+      text-align: center;
+      margin: auto;
+      color: white;
+      content: "Error loading";
+      font-family: "Open Sans", sans-serif;
+      font-weight: 600;
+      font-size: 13px; }
+    /* line 43, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+    .audio-player-wrapper.error .audio-player-image > * {
+      display: none; }
+
+/* line 46, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+.audio-player-image {
+  position: relative;
+  height: 149px;
+  -webkit-backface-visibility: hidden; }
+  /* line 50, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+  .audio-player-image > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: auto; }
+    /* line 56, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+    .audio-player-image > img.fading {
+      -webkit-transition: opacity 200ms linear;
+      -moz-transition: opacity 200ms linear;
+      -o-transition: opacity 200ms linear;
+      transition: opacity 200ms linear;
+      z-index: 1;
+      opacity: 0; }
+
+/* line 61, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+.audio-player-song-name {
+  position: absolute;
+  z-index: 2;
+  bottom: 5px;
+  right: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  color: white;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.9);
+  text-transform: uppercase; }
+
+/* line 73, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+.audio-player-controls {
+  padding: 15px; }
+
+@-moz-keyframes loadingStripes {
+  /* line 77, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+  0% {
+    background-position: -20px; }
+
+  /* line 79, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+  100% {
+    background-position: 0px; } }
+
+@-webkit-keyframes loadingStripes {
+  /* line 77, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+  0% {
+    background-position: -20px; }
+
+  /* line 79, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+  100% {
+    background-position: 0px; } }
+
+@-o-keyframes loadingStripes {
+  /* line 77, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+  0% {
+    background-position: -20px; }
+
+  /* line 79, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+  100% {
+    background-position: 0px; } }
+
+@-ms-keyframes loadingStripes {
+  /* line 77, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+  0% {
+    background-position: -20px; }
+
+  /* line 79, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+  100% {
+    background-position: 0px; } }
+
+@keyframes loadingStripes {
+  /* line 77, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+  0% {
+    background-position: -20px; }
+
+  /* line 79, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+  100% {
+    background-position: 0px; } }
+
+/* line 82, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+.audio-player-progress {
+  display: block;
+  width: 100%;
+  height: 5px;
+  border-radius: 25px;
+  background-color: #a0a7af;
+  overflow: hidden; }
+  /* line 89, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+  .audio-player-progress.loading {
+    background-image: -webkit-linear-gradient(-45deg, #808e97 25%, transparent 25%, transparent 50%, #808e97 50%, #808e97 75%, transparent 75%, transparent);
+    background-image: -moz-linear-gradient(-45deg, #808e97 25%, transparent 25%, transparent 50%, #808e97 50%, #808e97 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(-45deg, #808e97 25%, transparent 25%, transparent 50%, #808e97 50%, #808e97 75%, transparent 75%, transparent);
+    background-image: linear-gradient(-45deg, #808e97 25%, transparent 25%, transparent 50%, #808e97 50%, #808e97 75%, transparent 75%, transparent);
+    background-size: 20px 20px;
+    -webkit-animation: loadingStripes 700ms linear infinite;
+    -moz-animation: loadingStripes 700ms linear infinite;
+    -ms-animation: loadingStripes 700ms linear infinite;
+    -o-animation: loadingStripes 700ms linear infinite;
+    animation: loadingStripes 700ms linear infinite; }
+
+/* line 94, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+.audio-player-progress-bar {
+  -webkit-transition: width 200ms linear;
+  -moz-transition: width 200ms linear;
+  -o-transition: width 200ms linear;
+  transition: width 200ms linear;
+  display: block;
+  height: 100%;
+  width: 0;
+  max-width: 100%;
+  background-color: #808e97;
+  border-radius: 25px; }
+
+/* line 103, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+.audio-player-button {
+  display: block;
+  position: relative;
+  float: left;
+  width: 35px;
+  height: 35px;
+  margin: 0 5px;
+  border-radius: 100%;
+  border: 3px solid #808e97;
+  opacity: 0.8;
+  cursor: pointer; }
+  /* line 114, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+  .audio-player-button:hover {
+    opacity: 1; }
+  /* line 116, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+  .audio-player-button::before {
+    position: absolute;
+    top: -1px;
+    bottom: 0;
+    left: -12px;
+    right: 0;
+    width: 0px;
+    height: 0px;
+    margin: auto;
+    line-height: 1px;
+    font-size: 20px;
+    color: #808e97; }
+  /* line 128, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+  .audio-player-button.icon-pause::before {
+    font-size: 18px;
+    top: 1px;
+    left: -15px; }
+  /* line 132, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+  .audio-player-button.icon-backward::before {
+    left: -17px; }
+  /* line 134, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+  .audio-player-button.small {
+    width: 25px;
+    height: 25px;
+    margin-top: 5px; }
+    /* line 138, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+    .audio-player-button.small::before {
+      font-size: 15px; }
+
+/* line 141, /Users/Rose/Sites/audio_player/source/stylesheets/style.sass */
+.audio-player-button-wrappers {
+  overflow: hidden;
+  *zoom: 1;
+  display: block;
+  width: 133px;
+  margin: 15px auto 0 auto; }
